@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TÜBİTAK Projesi - Çetin Super AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+    .menu {
+      cursor: pointer;
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+    .menu:hover {
+      transform: scale(1.2);
+    }
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    nav a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      border-top: 1px solid #444;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #444;
+    }
+    .content {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease 0.2s forwards;
+    }
+    .content img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      transition: transform 0.3s ease;
+    }
+    .content img:hover {
+      transform: scale(1.02);
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e1e;
+      color: white;
+      opacity: 0;
+      animation: fadeIn 1s ease 0.5s forwards;
+    }
+    .whatsapp-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1da851;
+      transform: scale(1.05);
+    }@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>ÇETİN SUPER AI</strong></div>
+    <div class="menu" onclick="toggleMenu()">&#8942;</div>
+  </header>
+  <nav id="menuNav">
+    <a href="#">Ana Sayfa</a>
+    <a href="#">Hakkında</a>
+    <a href="#">Kaynakça</a>
+  </nav>  <div class="content">
+    <h1>Mikroorganizmalarla Doğal Temizlik</h1>
+    <img src="https://cdn.pixabay.com/photo/2016/03/09/09/30/drop-1245729_960_720.jpg" alt="Doğal temizlik">
+    <p>
+      Projemiz, bira mayası gibi doğal mikroorganizmalarla kirli suların doğaya zarar vermeden temizlenmesini konu alıyor.
+      Bu biyolojik temelli yöntemle; deterjan, motor yağı ve benzeri kimyasal kirliliklere karşı etkili ve sürdürülebilir bir çözüm sunuyoruz.
+    </p>
+    <p>
+      Yapılan deneylerde pH, koku ve bulanıklık gibi ölçümler ile mikroorganizmaların temizlik gücü test edildi.
+      Sonuçlar; doğanın kendi kendini iyileştirme gücünü ortaya koydu. Bu çalışma, çevre bilincini artırma ve doğa dostu yaklaşımların önemini vurguluyor.
+    </p>
+  </div>  <div class="footer">
+    ÇETİN SUPER AI'ın FBAL doğa kulübü için uyarlanmış halini deneyin<br>
+    <a href="https://wa.me/905050594210" target="_blank">
+      <button class="whatsapp-btn">Bize Ulaşın</button>
+    </a>
+  </div>  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menuNav');
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    }
+  </script></body>
+</html>
