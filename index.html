@@ -46,24 +46,19 @@
       font-size: 3rem;
       font-weight: bold;
       margin-bottom: 10px;
-    }
-
-    .fbal-title span.fb {
-      color: #FFD700;
-    }
-
-    .fbal-title span.al {
-      color: #0047AB;
+      background: linear-gradient(to right, #FFD700 0%, #0047AB 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .cetinsuperai {
       font-size: 3rem;
       font-weight: bold;
-      background: linear-gradient(to right, #f959fe 0%, #59f9fe 100%);
+      background: linear-gradient(to right, #f959fe, #59f9fe);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: gradientFade 2s ease-in-out forwards;
+      animation: gradientFade 3s ease-in-out forwards;
     }
 
     @keyframes gradientFade {
@@ -116,9 +111,7 @@
 
 <body>
   <div class="intro">
-    <div class="fbal-title">
-      <span class="fb">FB</span><span class="al">AL</span>
-    </div>
+    <div class="fbal-title">FBAL</div>
     <div class="cetinsuperai">ÇETİN SUPER AI</div>
     <button class="button" onclick="document.getElementById('main').scrollIntoView({ behavior: 'smooth' })">Giriş Yap</button>
   </div>
