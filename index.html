@@ -1,1 +1,122 @@
-Site Bakımda
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Çetin Super AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .fbal-title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .fbal-title span:first-child {
+      color: #FFD700;
+    }
+
+    .fbal-title span:last-child {
+      color: #0047AB;
+    }
+
+    .cetinsuperai {
+      font-size: 3rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #f959fe 40%, #59f9fe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideIn 1.3s ease forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border: none;
+      background: #59f9fe;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #f959fe;
+      color: white;
+    }
+
+    .footer {
+      text-align: center;
+      color: gray;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .fbal-title, .cetinsuperai {
+        font-size: 2.2rem;
+      }
+
+      .intro {
+        padding: 40px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    <div class="fbal-title">
+      <span>FB</span><span>AL</span>
+    </div>
+    <div class="cetinsuperai">ÇETİN SUPER AI</div>
+    <button class="button" onclick="document.getElementById('main').scrollIntoView({ behavior: 'smooth' })">Giriş Yap</button>
+  </div>
+
+  <div id="main">
+    <!-- Ana içerik buraya eklenecek -->
+  </div>
+
+  <div class="footer">
+    ©2025 ÇETİN SUPER AI TÜM HAKLARI SAKLIDIR
+  </div>
+
+</body>
+</html>
