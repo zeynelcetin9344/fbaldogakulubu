@@ -26,20 +26,30 @@
       align-items: center;
       animation: introReveal 1.2s ease-in-out forwards;
       text-align: center;
+      padding: 20px;
     }
     .intro h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
       letter-spacing: 2px;
       margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .fbal {
+    .fbal span:first-child {
       color: #FFD700;
       text-shadow: 0 0 10px #FFD700;
     }
-    .ai {
+    .fbal span:last-child {
       color: #0000CD;
       text-shadow: 0 0 10px #0000CD;
+    }
+    .ai {
+      background: linear-gradient(to right, #f959fe, #59f9fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px #59f9fe;
     }
     .intro h2 {
       font-size: 1.4rem;
@@ -114,6 +124,7 @@
       padding: 30px;
       background-color: #111;
       color: #ccc;
+      font-size: 14px;
     }
     .whatsapp-btn {
       margin-top: 10px;
@@ -141,11 +152,30 @@
   to { opacity: 1; }
 }
 
+@media (max-width: 600px) {
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+  .intro h2 {
+    font-size: 1rem;
+  }
+  .enter-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
   </style>
 </head>
 <body>
   <div class="intro" id="intro">
-    <h1><span class="fbal">FB</span>AL X <span class="ai">ÇETİN SUPER AI</span></h1>
+    <h1>
+      <span class="fbal">
+        <span>FB</span><span>AL</span>
+      </span>
+      &nbsp;X&nbsp;
+      <span class="ai">ÇETİN SUPER AI</span>
+    </h1>
     <h2>Doğal temizlikte devrimsel bir yaklaşım</h2>
     <button class="enter-btn" onclick="enterSite()">Siteye Gir</button>
   </div>  <div id="mainContent">
@@ -170,10 +200,11 @@
 </div>
 
 <div class="footer">
-  ÇETİN SUPER AI'ın FBAL doğa kulübü için uyarlanmış halini deneyin<br>
+  <p>ÇETİN SUPER AI'ın FBAL doğa kulübü için uyarlanmış halini deneyin</p>
   <a href="https://wa.me/905050594210" target="_blank">
     <button class="whatsapp-btn">Bize Ulaşın</button>
   </a>
+  <p style="margin-top: 20px; font-size: 13px;">©2025 ÇETİN SUPER AI TÜM HAKLARI SAKLIDIR</p>
 </div>
 
   </div>  <script>
