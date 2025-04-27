@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    /* Tüm CSS senin verdiğin gibi */
+    /* Genel CSS */
     * {
       margin: 0;
       padding: 0;
@@ -109,67 +109,67 @@
       margin: auto;
       animation: fadeInMain 1s ease 0.4s forwards;
     }
-    .card {
+
+    /* Yeni deneyin yapılışı ve bulgular kısmı için stil */
+    .experiment-section {
       background-color: #111;
-      padding: 20px;
       border-radius: 15px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 10px #8A2BE2;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 15px #00BFFF;
-    }
-    .footer {
-      text-align: center;
       padding: 30px;
-      background-color: #111;
+      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+      margin-top: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .experiment-header {
+      font-size: 2rem;
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #FFD700;
+    }
+    .experiment-content {
       color: #ccc;
-      font-size: 14px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      animation: fadeInContent 1s ease-out;
+      opacity: 0;
     }
-    .whatsapp-btn {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #25d366;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s ease;
+    .experiment-content p {
+      margin-bottom: 20px;
     }
-    .whatsapp-btn:hover {
-      background-color: #1da851;
-      transform: scale(1.05);
-    }
-    img {
+    .experiment-content img {
       max-width: 100%;
       border-radius: 10px;
       margin-top: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    }
+    .details-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: linear-gradient(to right, #8A2BE2, #00BFFF);
+      color: white;
+      border: none;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .details-btn:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeInContent {
+      to {
+        opacity: 1;
+      }
     }
     @keyframes introReveal {
       0% { opacity: 0; transform: scale(0.9); }
       100% { opacity: 1; transform: scale(1); }
     }
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
     @keyframes fadeInMain {
       from { opacity: 0; }
       to { opacity: 1; }
-    }
-    @media (max-width: 600px) {
-      .intro h1 {
-        font-size: 2.2rem;
-      }
-      .intro h2 {
-        font-size: 1rem;
-      }
-      .enter-btn {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-      }
     }
   </style>
 </head>
@@ -199,23 +199,25 @@
     </nav>
 
     <div class="section">
-      <div class="card">
-        <h2>Proje Amacı</h2>
-        <p>Bira mayası ve benzeri mikroorganizmalar kullanarak, deterjan ve motor yağı gibi kimyasallar içeren kirli suları doğal yollarla temizlemek. Bu yöntemle çevreye zarar vermeyen ve doğanın kendi iyileştirme gücünü destekleyen bir temizlik sağlanması hedeflenmektedir.</p>
-      </div>
-
-      <div class="card">
-        <h2>Deneyin Yapılışı ve Bulgular</h2>
-        <p><strong>Problem veya Soru Cümlesi:</strong> Yağ atıklarının çevreye verdiği zararı azaltmak için bira mayası kullanarak doğal ve etkili bir temizlik yöntemi kullanılabilir mi?</p>
-        <p><strong>Yöntem:</strong> Araştırma, inceleme, deneysel çalışma</p>
-        <p><strong>Özet:</strong> Bira mayası kullanarak yağların lipolizi</p>
-        <p><strong>Amaç:</strong> Bira mayasının yağları parçalama yeteneğini gözlemlemek ve bu süreçte rol oynayan faktörleri incelemek.</p>
-        <p><strong>Malzemeler:</strong> Bira mayası, bitkisel yağ, su, fosfat tampon çözeltisi, erlenmeyer, çalkalayıcı, inkübatör, pH metre, cam baget, mikroskop, yağ asidi test kiti.</p>
-        <p><strong>Deneyin Yapılışı:</strong> Taze bira mayası steril distile su ile canlandırıldıktan sonra zeytinyağına eklenip fosfat tampon çözeltisi ile ortamın pH dengesi sağlandı. 30°C'de inkübe edilerek süreç boyunca gözlemler yapıldı.</p>
-        <p><strong>Bulgular:</strong> 24 saatte yağ tabakası inceldi, sıvı berraklaştı. Mikroskop altında büyük yağ damlacıkları küçük ve düzensiz hale geldi. 48 saatte lipoliz ürünleri ve serbest yağ asidi artışı gözlemlendi.</p>
-        <p><strong>Sonuç:</strong> Bira mayası belirli koşullar altında yağları parçalayabildiği açıkça gözlemlendi. Bu yöntem, doğa dostu, etkili ve sürdürülebilir bir temizlik yöntemi sunmaktadır.</p>
-
-        <button onclick="window.location.href='detayli_bilgi_sayfasi.html'">Detaylı Bilgi İçin Tıklayın</button>
+      <div class="experiment-section">
+        <div class="experiment-header">
+          Deneyin Yapılışı ve Bulgular
+        </div>
+        <div class="experiment-content">
+          <p><strong>Özet:</strong> Bu araştırma, bira mayasının yağları nasıl temizlediğini ve bu süreçte hangi doğal mekanizmaların işlediğini incelemektedir. Yapılan gözlemler, bira mayasının yağları etkili bir şekilde parçaladığını göstermiştir.</p>
+          <p><strong>Problem veya Soru Cümlesi:</strong> Yağ atıklarının çevreye verdiği zararı azaltmak için bira mayası kullanarak doğal ve etkili bir temizlik yöntemi kullanılabilir mi?</p>
+          <p><strong>Yöntem:</strong> Araştırma, inceleme, deneysel çalışma</p>
+          <button class="details-btn" onclick="toggleDetails()">Detaylı bilgi için tıklayın</button>
+          <div id="details" style="display: none;">
+            <p><strong>Amaç:</strong> Bira mayasının yağları parçalama yeteneğini gözlemlemek ve bu süreçte rol oynayan faktörleri incelemek.</p>
+            <p><strong>Malzemeler:</strong> Bira mayası, bitkisel yağ, su, fosfat tampon çözeltisi, erlenmeyer, çalkalayıcı, inkübatör, pH metre, cam baget, mikroskop, yağ asidi test kiti.</p>
+            <p><strong>Deneyin Yapılışı:</strong> Taze bira mayası steril distile su ile canlandırıldıktan sonra zeytinyağına eklenip fosfat tampon çözeltisi ile ortamın pH dengesi sağlandı. 30°C'de inkübe edilerek süreç boyunca gözlemler yapıldı.</p>
+            <p><strong>Bulgular:</strong> 24 saatte yağ tabakası inceldi, sıvı berraklaştı. Mikroskop altında büyük yağ damlacıkları küçük ve düzensiz hale geldi. 48 saatte lipoliz ürünleri ve serbest yağ asidi artışı gözlemlendi.</p>
+            <p><strong>Sonuç:</strong> Bira mayası belirli koşullar altında yağları parçalayabildiği açıkça gözlemlendi. Bu yöntem, doğa dostu, etkili ve sürdürülebilir bir temizlik yöntemi sunmaktadır.</p>
+            <img src="https://via.placeholder.com/800x600.png?text=Deney+Resmi+1" alt="Deney Görseli 1">
+            <img src="https://via.placeholder.com/800x600.png?text=Deney+Resmi+2" alt="Deney Görseli 2">
+          </div>
+        </div>
       </div>
     </div>
 
@@ -236,6 +238,10 @@
     function enterSite() {
       document.getElementById('intro').style.display = 'none';
       document.getElementById('mainContent').style.display = 'block';
+    }
+    function toggleDetails() {
+      const details = document.getElementById('details');
+      details.style.display = details.style.display === 'none' ? 'block' : 'none';
     }
   </script>
 </body>
