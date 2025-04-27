@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaynakça</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro-animation">
+        <h1 class="intro-text">Bu site Zeynel ÇETİN tarafından geliştirilmiştir ve CETIN SUPER AI tarafından desteklenmektedir.</h1>
+    </div>
+
+    <div class="content">
+        <h2>Kaynakça</h2>
+        <ul>
+            <li><strong>Campbell, N. A., & Reece, J. B.</strong> (2008). <em>Biology</em> (8th ed.). Pearson Benjamin Cummings. <br>Bu eser, genel biyoloji prensiplerini ve hücre metabolizmasını anlamak için faydalı bir kaynaktır.</li>
+            <li><strong>Madigan, M. T., Martinko, J. M., Bender, K. S., Buckley, D. H., & Stahl, D. A.</strong> (2015). <em>Brock Biology of Microorganisms</em> (14th ed.). Pearson Education. <br>Mikrobiyolojiye odaklanan bu kitap, mayaların özellikleri ve metabolizması hakkında derinlemesine bilgi sunmaktadır.</li>
+            <li><strong>Prescott, L. M., Harley, J. P., & Klein, D. A.</strong> (2005). <em>Microbiology</em> (6th ed.). McGraw-Hill. <br>Mikrobiyoloji alanında kapsamlı bir kaynak olup, mikroorganizmaların biyolojisi hakkında geniş bir bakış açısı sunmaktadır.</li>
+        </ul>
+    </div>
+</body>
+</html>
