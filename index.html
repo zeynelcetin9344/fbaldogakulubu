@@ -200,7 +200,7 @@
       X
       <span class="ai">ÇETİN SUPER AI</span>
     </h1>
-    <h2>Doğal temizlikte devrimsel bir yaklaşım</h2>
+    <h2>Doğanın İşine Karışma O Kendini Temizler</h2>
     <button class="enter-btn" onclick="enterSite()">Siteye Gir</button>
   </div>
 
@@ -211,7 +211,8 @@
     </header>
     <nav id="menuNav">
       <a href="https://cetinsuperai2.netlify.app" target="_blank">ÇETİN SUPER AI Hakkında</a>
-      <a href="kaynakca.html">Kaynakça</a> <!-- Bu kısmı düzenledik -->
+      <!-- Kaynakça linkini buraya ekliyoruz -->
+      <a href="KAYNAKÇA_URL" target="_blank" class="link-button">Kaynakça</a>
     </nav>
 
     <div class="section">
@@ -243,4 +244,12 @@
   <script>
     function toggleMenu() {
       const nav = document.getElementById('menuNav');
-      nav.style.display = nav.style.display === 'flex' ?
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+    function enterSite() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
