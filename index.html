@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    /* Tüm CSS senin verdiğin gibi */
     * {
       margin: 0;
       padding: 0;
@@ -193,9 +192,8 @@
       <div class="menu" onclick="toggleMenu()">⋮</div>
     </header>
     <nav id="menuNav">
-      <a href="#">Ana Sayfa</a>
-      <a href="#">Hakkında</a>
-      <a href="#">Kaynakça</a>
+      <a href="#" onclick="openPage('about')">Hakkında</a>
+      <a href="#" onclick="openPage('references')">Kaynakça</a>
     </nav>
 
     <div class="section">
@@ -204,18 +202,22 @@
         <p>Bira mayası ve benzeri mikroorganizmalar kullanarak, deterjan ve motor yağı gibi kimyasallar içeren kirli suları doğal yollarla temizlemek. Bu yöntemle çevreye zarar vermeyen ve doğanın kendi iyileştirme gücünü destekleyen bir temizlik sağlanması hedeflenmektedir.</p>
       </div>
 
+      <div class="card">
+        <h2>ÇETİN SUPER AI Nedir?</h2>
+        <p>ÇETİN SUPER AI, Zeynel ÇETİN tarafından geliştirilen ve TÜBİTAK FBAL doğa kulübü için uyarlanmış bir yapay zeka projesidir. Bu proje, çevre dostu temizlik çözümleri sunarak suyun temizlenmesinde devrimsel bir yaklaşım sunmaktadır.</p>
+        <p>Yapay zekayı kullanmak için <a href="https://wa.me/905050594210" target="_blank">bize ulaşın</a>.</p>
+      </div>
 
       <button onclick="window.location.href='detayli_bilgi_sayfasi.html'">Detaylı Bilgi İçin Tıklayın</button>
-      </div>
     </div>
+  </div>
 
-    <div class="footer">
-      <p>ÇETİN SUPER AI'ın FBAL doğa kulübü için uyarlanmış halini deneyin</p>
-      <a href="https://wa.me/905050594210" target="_blank">
-        <button class="whatsapp-btn">Bize Ulaşın</button>
-      </a>
-      <p style="margin-top: 20px; font-size: 13px;">©2025 ÇETİN SUPER AI TÜM HAKLARI SAKLIDIR</p>
-    </div>
+  <div class="footer">
+    <p>ÇETİN SUPER AI'ın FBAL doğa kulübü için uyarlanmış halini deneyin</p>
+    <a href="https://wa.me/905050594210" target="_blank">
+      <button class="whatsapp-btn">Bize Ulaşın</button>
+    </a>
+    <p style="margin-top: 20px; font-size: 13px;">©2025 ÇETİN SUPER AI TÜM HAKLARI SAKLIDIR</p>
   </div>
 
   <script>
@@ -226,6 +228,13 @@
     function enterSite() {
       document.getElementById('intro').style.display = 'none';
       document.getElementById('mainContent').style.display = 'block';
+    }
+    function openPage(page) {
+      if (page === 'about') {
+        window.open('about.html', '_blank');
+      } else if (page === 'references') {
+        window.open('references.html', '_blank');
+      }
     }
   </script>
 </body>
