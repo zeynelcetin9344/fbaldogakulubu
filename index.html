@@ -8,34 +8,179 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    /* Önceki stil kodları burada kaldı... */
-    /* Yeni stil eklemeleri */
-    .summary {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #ccc;
+    /* Tüm CSS senin verdiğin gibi */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .summary-button {
-      background-color: #8A2BE2;
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
       color: white;
+      overflow-x: hidden;
+    }
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: introReveal 1.2s ease-in-out forwards;
+      text-align: center;
+      padding: 20px;
+    }
+    .intro h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .fbal span:first-child {
+      color: #FFD700;
+      text-shadow: 0 0 10px #FFD700;
+    }
+    .fbal span:last-child {
+      color: #0000CD;
+      text-shadow: 0 0 10px #0000CD;
+    }
+    .ai {
+      background: linear-gradient(to right, #f959fe, #59f9fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px #59f9fe;
+    }
+    .intro h2 {
+      font-size: 1.4rem;
+      color: #ccc;
+      animation: fadeIn 1s ease-in 1.2s forwards;
+      opacity: 0;
+    }
+    .enter-btn {
+      margin-top: 2rem;
       padding: 10px 20px;
       border: none;
+      background: linear-gradient(to right, #8A2BE2, #00BFFF);
+      color: white;
+      font-size: 1rem;
       border-radius: 8px;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
-    .summary-button:hover {
+    .enter-btn:hover {
       transform: scale(1.05);
+    }
+    #mainContent {
+      display: none;
+      animation: fadeInMain 1s ease forwards;
+    }
+    header {
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .menu {
+      cursor: pointer;
+      font-size: 24px;
+    }
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+    }
+    nav a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      border-top: 1px solid #222;
+    }
+    .section {
+      padding: 60px 30px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInMain 1s ease 0.4s forwards;
+    }
+    .card {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px #8A2BE2;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #00BFFF;
+    }
+    .footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #111;
+      color: #ccc;
+      font-size: 14px;
+    }
+    .whatsapp-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1da851;
+      transform: scale(1.05);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    @keyframes introReveal {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes fadeInMain {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      .intro h1 {
+        font-size: 2.2rem;
+      }
+      .intro h2 {
+        font-size: 1rem;
+      }
+      .enter-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="intro" id="intro">
     <h1>
       <span class="fbal">
         <span>FB</span><span>AL</span>
       </span>
-       X 
+      X
       <span class="ai">ÇETİN SUPER AI</span>
     </h1>
     <h2>Doğal temizlikte devrimsel bir yaklaşım</h2>
@@ -60,11 +205,17 @@
       </div>
 
       <div class="card">
-        <h2>Detaylı Bilgi</h2>
-        <p class="summary">Yağ atıklarının çevreye verdiği zararı azaltmak için bira mayası kullanarak doğal ve etkili bir temizlik yöntemi kullanılabilir mi? Bu soruyu araştıran çalışmada, bira mayası kullanılarak yağların lipolizi (parçalanması) gözlemlenmiştir. Bira mayası, belirli koşullar altında yağları parçalayarak doğa dostu bir temizlik çözümü sunmaktadır.</p>
-        <a href="detayli-bilgi.html">
-          <button class="summary-button">Detaylı bilgi için tıklayın</button>
-        </a>
+        <h2>Deneyin Yapılışı ve Bulgular</h2>
+        <p><strong>Problem veya Soru Cümlesi:</strong> Yağ atıklarının çevreye verdiği zararı azaltmak için bira mayası kullanarak doğal ve etkili bir temizlik yöntemi kullanılabilir mi?</p>
+        <p><strong>Yöntem:</strong> Araştırma, inceleme, deneysel çalışma</p>
+        <p><strong>Özet:</strong> Bira mayası kullanarak yağların lipolizi</p>
+        <p><strong>Amaç:</strong> Bira mayasının yağları parçalama yeteneğini gözlemlemek ve bu süreçte rol oynayan faktörleri incelemek.</p>
+        <p><strong>Malzemeler:</strong> Bira mayası, bitkisel yağ, su, fosfat tampon çözeltisi, erlenmeyer, çalkalayıcı, inkübatör, pH metre, cam baget, mikroskop, yağ asidi test kiti.</p>
+        <p><strong>Deneyin Yapılışı:</strong> Taze bira mayası steril distile su ile canlandırıldıktan sonra zeytinyağına eklenip fosfat tampon çözeltisi ile ortamın pH dengesi sağlandı. 30°C'de inkübe edilerek süreç boyunca gözlemler yapıldı.</p>
+        <p><strong>Bulgular:</strong> 24 saatte yağ tabakası inceldi, sıvı berraklaştı. Mikroskop altında büyük yağ damlacıkları küçük ve düzensiz hale geldi. 48 saatte lipoliz ürünleri ve serbest yağ asidi artışı gözlemlendi.</p>
+        <p><strong>Sonuç:</strong> Bira mayası belirli koşullar altında yağları parçalayabildiği açıkça gözlemlendi. Bu yöntem, doğa dostu, etkili ve sürdürülebilir bir temizlik yöntemi sunmaktadır.</p>
+
+        <button onclick="window.location.href='detayli_bilgi_sayfasi.html'">Detaylı Bilgi İçin Tıklayın</button>
       </div>
     </div>
 
