@@ -4,7 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaynakça</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Genel stil */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Animasyonlu giriş metni */
+        .intro-animation {
+            text-align: center;
+            margin-top: 50px;
+            animation: fadeIn 3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .intro-text {
+            font-size: 24px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        /* İçerik bölüm stil */
+        .content {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #34495e;
+        }
+
+        /* Kaynakça listesi */
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content li {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .content li strong {
+            color: #007BFF;
+        }
+
+        .content li em {
+            font-style: italic;
+            color: #e74c3c;
+        }
+
+        /* Responsive tasarım */
+        @media (max-width: 600px) {
+            .intro-text {
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="intro-animation">
