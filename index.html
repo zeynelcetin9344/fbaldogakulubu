@@ -143,48 +143,6 @@
       background-color: #1da851;
       transform: scale(1.05);
     }
-    .timeline {
-      margin-top: 40px;
-      color: #ccc;
-    }
-    .timeline h2 {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .timeline ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    .timeline ul li {
-      margin-bottom: 10px;
-    }
-    .testimonials {
-      margin-top: 40px;
-      color: #ccc;
-    }
-    .testimonials h3 {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-    .testimonials p {
-      font-size: 1rem;
-      margin: 10px 0;
-      text-align: center;
-    }
-    .social-media {
-      margin-top: 40px;
-      color: #ccc;
-      text-align: center;
-    }
-    .social-media h3 {
-      font-size: 1.5rem;
-    }
-    .social-media a {
-      text-decoration: none;
-      color: #FFD700;
-      margin: 0 10px;
-    }
     img {
       max-width: 100%;
       border-radius: 10px;
@@ -235,43 +193,40 @@
       <div class="menu" onclick="toggleMenu()">⋮</div>
     </header>
     <nav id="menuNav">
-      <a href="proje_amaci.html">Proje Amacı</a>
-      <a href="hakkinda.html">Hakkında</a>
-      <a href="kaynakca.html">Kaynakça</a>
+      <a href="#">Ana Sayfa</a>
+      <a href="#">Hakkında</a>
+      <a href="#">Kaynakça</a>
     </nav>
 
     <div class="section">
       <div class="card">
         <h2>Proje Amacı</h2>
-        <p>Bu proje, çevre kirliliğiyle mücadelede biyolojik yöntemlerin etkinliğini göstermek amacıyla tasarlanmıştır. Bira mayası ve benzeri mikroorganizmalar kullanarak, deterjan ve motor yağı gibi kimyasallar içeren kirli suları doğal yollarla temizlemek. Bu yöntemle çevreye zarar vermeyen ve doğanın kendi iyileştirme gücünü destekleyen bir temizlik sağlanması hedeflenmektedir.</p>
+        <p>Bira mayası ve benzeri mikroorganizmalar kullanarak, deterjan ve motor yağı gibi kimyasallar içeren kirli suları doğal yollarla temizlemek. Bu yöntemle çevreye zarar vermeyen ve doğanın kendi iyileştirme gücünü destekleyen bir temizlik sağlanması hedeflenmektedir.</p>
       </div>
 
-      <button onclick="window.location.href='detayli_bilgi_sayfasi.html'">Proje Hakkında Detaylı Bilgi Edinin</button>
-    </div>
 
-    <div class="timeline">
-      <h2>Proje Zaman Çizelgesi</h2>
-      <ul>
-        <li>2025 - Proje Başlangıcı: İlk araştırmalar ve testler</li>
-        <li>2025 - Pilot Testler: Proje yöntemlerinin doğrulanması</li>
-        <li>2026 - Yaygınlaştırma: Sanayiye adaptasyon ve genişleme</li>
-      </ul>
-    </div>
-
-    <div class="testimonials">
-      <h3>Kullanıcı Yorumları</h3>
-      <p>"Bu teknoloji gerçekten çevreyi korumak adına büyük bir adım. Temiz suya erişim daha da kolaylaşacak!" - Ahmet, Çevre Mühendisi</p>
-      <p>"Projenin etkisi büyük. Artık kimyasal atıkların doğaya zarar vermeden temizlenebileceğini görmek heyecan verici." - Zeynep, Sürdürülebilirlik Uzmanı</p>
-    </div>
-
-    <div class="social-media">
-      <h3>Bizi Takip Edin</h3>
-      <a href="https://facebook.com">Facebook</a>
-      <a href="https://twitter.com">Twitter</a>
-      <a href="https://instagram.com">Instagram</a>
+      <button onclick="window.location.href='detayli_bilgi_sayfasi.html'">Detaylı Bilgi İçin Tıklayın</button>
+      </div>
     </div>
 
     <div class="footer">
       <p>ÇETİN SUPER AI'ın FBAL doğa kulübü için uyarlanmış halini deneyin</p>
       <a href="https://wa.me/905050594210" target="_blank">
-        <button class="whatsapp-btn">Bize
+        <button class="whatsapp-btn">Bize Ulaşın</button>
+      </a>
+      <p style="margin-top: 20px; font-size: 13px;">©2025 ÇETİN SUPER AI TÜM HAKLARI SAKLIDIR</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('menuNav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+    function enterSite() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
