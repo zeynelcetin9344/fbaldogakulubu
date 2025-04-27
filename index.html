@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    /* Tüm CSS senin verdiğin gibi + küçük düzenlemeler */
+    /* Tüm CSS senin verdiğin gibi */
     * {
       margin: 0;
       padding: 0;
@@ -180,7 +180,7 @@
       <span class="fbal">
         <span>FB</span><span>AL</span>
       </span>
-      X 
+      X
       <span class="ai">ÇETİN SUPER AI</span>
     </h1>
     <h2>Doğal temizlikte devrimsel bir yaklaşım</h2>
@@ -206,19 +206,16 @@
 
       <div class="card">
         <h2>Deneyin Yapılışı ve Bulgular</h2>
-        <p><strong>Özet:</strong> Bu araştırma, bira mayasının yağları nasıl temizlediğini ve bu süreçte hangi doğal mekanizmaların işlediğini incelemektedir. Yapılan gözlemler, bira mayasının yağları etkili bir şekilde parçaladığını göstermiştir.</p>
         <p><strong>Problem veya Soru Cümlesi:</strong> Yağ atıklarının çevreye verdiği zararı azaltmak için bira mayası kullanarak doğal ve etkili bir temizlik yöntemi kullanılabilir mi?</p>
         <p><strong>Yöntem:</strong> Araştırma, inceleme, deneysel çalışma</p>
-        <button onclick="toggleDetails()">Detaylı bilgi için tıklayın</button>
-        <div id="details" style="display: none;">
-          <p><strong>Amaç:</strong> Bira mayasının yağları parçalama yeteneğini gözlemlemek ve bu süreçte rol oynayan faktörleri incelemek.</p>
-          <p><strong>Malzemeler:</strong> Bira mayası, bitkisel yağ, su, fosfat tampon çözeltisi, erlenmeyer, çalkalayıcı, inkübatör, pH metre, cam baget, mikroskop, yağ asidi test kiti.</p>
-          <p><strong>Deneyin Yapılışı:</strong> Taze bira mayası steril distile su ile canlandırıldıktan sonra zeytinyağına eklenip fosfat tampon çözeltisi ile ortamın pH dengesi sağlandı. 30°C'de inkübe edilerek süreç boyunca gözlemler yapıldı.</p>
-          <p><strong>Bulgular:</strong> 24 saatte yağ tabakası inceldi, sıvı berraklaştı. Mikroskop altında büyük yağ damlacıkları küçük ve düzensiz hale geldi. 48 saatte lipoliz ürünleri ve serbest yağ asidi artışı gözlemlendi.</p>
-          <p><strong>Sonuç:</strong> Bira mayası belirli koşullar altında yağları parçalayabildiği açıkça gözlemlendi. Bu yöntem, doğa dostu, etkili ve sürdürülebilir bir temizlik yöntemi sunmaktadır.</p>
-          <img src="https://via.placeholder.com/800x600.png?text=Deney+Resmi+1" alt="Deney Görseli 1">
-          <img src="https://via.placeholder.com/800x600.png?text=Deney+Resmi+2" alt="Deney Görseli 2">
-        </div>
+        <p><strong>Özet:</strong> Bira mayası kullanarak yağların lipolizi</p>
+        <p><strong>Amaç:</strong> Bira mayasının yağları parçalama yeteneğini gözlemlemek ve bu süreçte rol oynayan faktörleri incelemek.</p>
+        <p><strong>Malzemeler:</strong> Bira mayası, bitkisel yağ, su, fosfat tampon çözeltisi, erlenmeyer, çalkalayıcı, inkübatör, pH metre, cam baget, mikroskop, yağ asidi test kiti.</p>
+        <p><strong>Deneyin Yapılışı:</strong> Taze bira mayası steril distile su ile canlandırıldıktan sonra zeytinyağına eklenip fosfat tampon çözeltisi ile ortamın pH dengesi sağlandı. 30°C'de inkübe edilerek süreç boyunca gözlemler yapıldı.</p>
+        <p><strong>Bulgular:</strong> 24 saatte yağ tabakası inceldi, sıvı berraklaştı. Mikroskop altında büyük yağ damlacıkları küçük ve düzensiz hale geldi. 48 saatte lipoliz ürünleri ve serbest yağ asidi artışı gözlemlendi.</p>
+        <p><strong>Sonuç:</strong> Bira mayası belirli koşullar altında yağları parçalayabildiği açıkça gözlemlendi. Bu yöntem, doğa dostu, etkili ve sürdürülebilir bir temizlik yöntemi sunmaktadır.</p>
+
+        <button onclick="window.location.href='detayli_bilgi_sayfasi.html'">Detaylı Bilgi İçin Tıklayın</button>
       </div>
     </div>
 
@@ -239,10 +236,6 @@
     function enterSite() {
       document.getElementById('intro').style.display = 'none';
       document.getElementById('mainContent').style.display = 'block';
-    }
-    function toggleDetails() {
-      const details = document.getElementById('details');
-      details.style.display = details.style.display === 'none' ? 'block' : 'none';
     }
   </script>
 </body>
