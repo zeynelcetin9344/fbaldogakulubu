@@ -158,6 +158,32 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+    .link-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 30px;
+      background-color: #0000CD;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .link-btn:hover {
+      background-color: #FFD700;
+      transform: scale(1.05);
+    }
+    .center-btn {
+      text-align: center;
+      animation: fadeInButton 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInButton {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     @media (max-width: 600px) {
       .intro h1 {
         font-size: 2.2rem;
@@ -199,16 +225,13 @@
     <div class="section">
       <div class="card">
         <h2>ÇETİN SUPER AI Nedir?</h2>
-        <p>ÇETİN SUPER AI, Zeynel ÇETİN tarafından geliştirilen ve TÜBİTAK FBAL doğa kulübü için uyarlanmış bir yapay zekadır. ÇETİN AI hakkında detaylı bilgi için <a href="https://cetinsuperai2.netlify.app" target="_blank">buraya tıklayın</a>.</p>
+        <p>ÇETİN SUPER AI, Zeynel ÇETİN tarafından geliştirilen ve TÜBİTAK FBAL doğa kulübü için uyarlanmış bir yapay zekadır. ÇETİN AI hakkında detaylı bilgi için <a href="https://cetinsuperai2.netlify.app" target="_blank" style="color: #0000CD;">buraya tıklayın</a>.</p>
         <p>Yapay zekayı kullanmak için bize ulaşın.</p>
       </div>
 
-      <div class="card">
-        <h2>Proje Amacı</h2>
-        <p>Bira mayası ve benzeri mikroorganizmalar kullanarak, deterjan ve motor yağı gibi kimyasallar içeren kirli suları doğal yollarla temizlemek. Bu yöntemle çevreye zarar vermeyen ve doğanın kendi iyileştirme gücünü destekleyen bir temizlik sağlanması hedeflenmektedir.</p>
+      <div class="card center-btn">
+        <a href="detayli_bilgi_sayfasi.html" class="link-btn">Detaylı Bilgi İçin Tıklayın</a>
       </div>
-
-      <button onclick="window.location.href='detayli_bilgi_sayfasi.html'">Detaylı Bilgi İçin Tıklayın</button>
     </div>
 
     <div class="footer">
