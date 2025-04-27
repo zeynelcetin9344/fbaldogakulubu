@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    /* Tüm CSS senin verdiğin gibi + küçük düzenlemeler */
     * {
       margin: 0;
       padding: 0;
@@ -142,7 +143,11 @@
       background-color: #1da851;
       transform: scale(1.05);
     }
-
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
     @keyframes introReveal {
       0% { opacity: 0; transform: scale(0.9); }
       100% { opacity: 1; transform: scale(1); }
@@ -154,7 +159,6 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
     @media (max-width: 600px) {
       .intro h1 {
         font-size: 2.2rem;
@@ -169,13 +173,14 @@
     }
   </style>
 </head>
+
 <body>
   <div class="intro" id="intro">
     <h1>
       <span class="fbal">
         <span>FB</span><span>AL</span>
       </span>
-      &nbsp;X&nbsp;
+      X 
       <span class="ai">ÇETİN SUPER AI</span>
     </h1>
     <h2>Doğal temizlikte devrimsel bir yaklaşım</h2>
@@ -185,7 +190,7 @@
   <div id="mainContent">
     <header>
       <div><strong>ÇETİN SUPER AI</strong></div>
-      <div class="menu" onclick="toggleMenu()">&#8942;</div>
+      <div class="menu" onclick="toggleMenu()">⋮</div>
     </header>
     <nav id="menuNav">
       <a href="#">Ana Sayfa</a>
@@ -200,8 +205,18 @@
       </div>
 
       <div class="card">
-        <h2>Detaylı Bilgi</h2>
-        <p>Bu alana PDF’ten aldığın bilimsel açıklamaları ekleyeceğiz. Burası daha akademik dursun ama hala sade kalsın diye bu şekilde kutuya aldım. Okuyanlar isterse okusun, okumayanlar için göz yormasın.</p>
+        <h2>Deneyin Yapılışı ve Bulgular</h2>
+        <p><strong>Problem veya Soru Cümlesi:</strong> Yağ atıklarının çevreye verdiği zararı azaltmak için bira mayası kullanarak doğal ve etkili bir temizlik yöntemi kullanılabilir mi?</p>
+        <p><strong>Yöntem:</strong> Araştırma, inceleme, deneysel çalışma</p>
+        <p><strong>Özet:</strong> Bira mayası kullanarak yağların lipolizi</p>
+        <p><strong>Amaç:</strong> Bira mayasının yağları parçalama yeteneğini gözlemlemek ve bu süreçte rol oynayan faktörleri incelemek.</p>
+        <p><strong>Malzemeler:</strong> Bira mayası, bitkisel yağ, su, fosfat tampon çözeltisi, erlenmeyer, çalkalayıcı, inkübatör, pH metre, cam baget, mikroskop, yağ asidi test kiti.</p>
+        <p><strong>Deneyin Yapılışı:</strong> Taze bira mayası steril distile su ile canlandırıldıktan sonra zeytinyağına eklenip fosfat tampon çözeltisi ile ortamın pH dengesi sağlandı. 30°C'de inkübe edilerek süreç boyunca gözlemler yapıldı.</p>
+        <p><strong>Bulgular:</strong> 24 saatte yağ tabakası inceldi, sıvı berraklaştı. Mikroskop altında büyük yağ damlacıkları küçük ve düzensiz hale geldi. 48 saatte lipoliz ürünleri ve serbest yağ asidi artışı gözlemlendi.</p>
+        <p><strong>Sonuç:</strong> Bira mayası belirli koşullar altında yağları parçalayabildiği açıkça gözlemlendi. Bu yöntem, doğa dostu, etkili ve sürdürülebilir bir temizlik yöntemi sunmaktadır.</p>
+
+        <img src="https://cdn.openai.com/chatgpt/1.jpg" alt="Deney Görseli 1">
+        <img src="https://cdn.openai.com/chatgpt/2.jpg" alt="Deney Görseli 2">
       </div>
     </div>
 
